@@ -417,8 +417,9 @@ div.boy > span.out:after{animation:conv 5s linear 3s 1;}
     opacity:1; right:-108%; top:0;  height:100%;
 }
 .left .nasCont p i{
-    position: absolute; bottom:30px; right:30px; color:#666; cursor:pointer;
+    position: absolute; bottom:30px; right:30px; color:#666; 
 }
+.left .nasCont p i:hover{cursor:pointer;}
 
 @keyframes up{
     0%{background-position:0 150px;}
