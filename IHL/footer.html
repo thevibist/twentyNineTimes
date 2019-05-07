@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#translate dt").click(function(e){
+        e.preventDefault;
+        $("#translate dt").removeClass("on");
+        $("#translate dd").removeClass("on");
+        $(this).next().addClass("on")
+        $(this).addClass("on")
+    });
+});
+    
+</script>
+</head>
+<body>
+    <div id="foot">
+    <button class="fam" type="button">FAMILY SITE <img src="images/family_bu.gif" alt="패밀리 사이트 더보기"/></button>
+
+    <dl class="translate" id="translate">
+        <dt class="tab"><a>ENG</a></dt>
+        <dd class="eng">
+            <ul>
+                <li>Sustainable Management</li>
+                <li>Privacy</li>
+                <li>Site Map</li>
+            </ul>
+        </dd>
+
+        <dt class="tab on"><a>KOR</a></dt>
+        <dd class="kor on">
+            <ul>
+                <li>지속가능경영</li>
+                <li><strong>개인정보취급방침</strong></li>
+                <li>이메일주소무단수집거부</li>
+                <li>사이트맵</li>
+            </ul>
+        </dd>
+    </dl>
+    <!-- //translate -->
+
+    <copyright>
+        ⓒ2015 Hyundai IHL Co.,Ltd <br /> All Rights Reserved.
+    </copyright>
+
+</div>
+<!-- //footer -->
+
+</body>
+</html>
+

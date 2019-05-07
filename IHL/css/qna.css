@@ -1,0 +1,111 @@
+@import url(reset.css);
+
+/*common*/
+body{
+    font-family: Dotum,"돋움",sans-serif;font-size:12px;
+}
+a{
+    color:#333;
+    text-decoration:none;
+}
+a:hover,a:focus,a:active{
+    
+}
+/*layout*/
+#wrap{
+   width:100%; height:100%; margin:0 auto;
+    background-color: slategray; position:relative; overflow:hidden; 
+}
+#header{
+    position:relative; width:200px; height:100%; z-index:20;
+    background-color:white; box-shadow:2px 0 3px rgba(50,50,50,0.2);
+}
+#container{
+    background-color: white; width:981px; height:924px; z-index:0;
+    margin-left:200px; padding:50px; position:absolute; top:0; 
+}
+#footer{
+    background-color:white;
+    position:absolute; bottom:170px;
+    width:198px; height:216px;
+}
+
+/*container*/
+#container div.conTtl{
+    width :750px; height: 150px;
+}
+#container div.conTtl p{
+    float:right;
+}
+#container form{width:750px;}
+#container form p.check{
+    width:100%; text-align:right;
+    color:royalblue;
+    line-height:36px;
+    background:url("../images/boardBor_bg.gif") no-repeat 0 30px;
+}
+#container form input,select{
+    line-height: 20px; border:0.5px solid lightgray;
+}
+#container table{
+    width:750px; height:774px; 
+    /*background:url(../images/boardBor_bg.gif) no-repeat 0 0;*/
+}
+#container table p{
+    display:inline;
+}
+#container table tr{
+    height:40px;
+    border-bottom:1px solid lightgray;   
+}
+#container table th{
+    width:150px;
+    background-color:aliceblue;
+    padding-left:20px;
+}
+#container table td{
+    padding-left:20px; 
+}
+#container table #slt{
+    width:80px; height:25px;
+}
+#container table #txtB{
+    height:190px;
+    margin:10px 0;
+}
+#container .lookup{
+    background-color:white;
+    border:1px solid gray;
+    height:25px; width:60px; vertical-align: bottom;
+    color:#333;
+}
+#container .bttn{
+    background-color:white;
+    border:1px solid gray;
+    width:25px; height:25px;
+}
+#container p{
+    color:blue;
+}
+#container .complete{
+    width:100px; height:35px;
+    margin-top: 10px; float: right;
+    background-color: steelblue;
+    color:white;
+} 
+#container .playS{
+    width:90px; height:25px;
+    border:1px solid gray;
+    vertical-align:middle;
+    background: url(../images/listenBt_bg.gif) no-repeat 0 -7px;
+    background-size:90px px;
+    text-indent:25px; 
+   
+}
+/*사이드메뉴*/
+.sideM{
+    position:absolute; top:5px; left:1300px;
+}
+.sideM ul li{
+    margin:10px; float:left; 
+}

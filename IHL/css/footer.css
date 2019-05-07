@@ -1,0 +1,46 @@
+
+@import url(reset.css);
+
+/*footer*/
+#foot{
+    width:200px; height:320px; 
+    position:relative; background:url(../images/mark_new.gif) no-repeat 170% 90%;
+    background-size:110%;
+    z-index:999;
+}
+#foot button{
+    width:160px; height:30px; margin:20px; 
+    background-color: white; border:1px solid lightgray;
+}
+#foot ul{    
+    width:100%; height:100px; margin-top:55px;
+    border:1px solid lightgray; box-sizing:border-box;   
+    background-color:#eeeff3; float:left;
+}
+#foot dl.translate dt{
+    width:100px; padding:5px; box-sizing:border-box;
+    position: absolute; text-align:center;
+    border:1px solid lightgray; font-size:12px;
+    background-color:#eeeff3; box-sizing:border-box;
+}
+#foot dl.translate dt.on a{text-decoration:underline;}
+#foot dl.translate dt a{
+    text-decoration:none; color:#666; cursor:pointer;
+}
+#foot dl.translate dt:nth-of-type(2){left:100px;}
+#foot dl.translate dd{display:none;}
+#foot dl.translate dd.on{display:block;}
+#foot dl.translate dd ul{
+    width:200px; height:100px; padding:10px 20px;
+    position:absolute; top:42px; box-sizing:border-box;
+    line-height:20px; font-size:12px;
+}
+strong{font-weight:bold; color:#333;}
+#foot copyright{
+    clear:both; border:none; width:100%; position:absolute; 
+     bottom:0px; left:0; font-size:12px; padding:0 0 10px 25px;
+    color:#777; letter-spacing:-0.5px; font-family:Dotum, sans-serif;
+    
+}
+    
+    
