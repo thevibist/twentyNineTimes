@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* reset.css */
+html,body{
+    width:100%;height:100%;
+    font-size: 12px; 
+}
+button{cursor:pointer;}
+body,div,dl,dt,dd,ul,li,ol,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,span,blockquote,th,td,table{margin:0;padding:0;}
+table{border-collapse:collapse;}
+img,fieldset{border:none;}
+a{text-decoration: none; color:#333;}
+address,caption,cite,code,em,strong,th{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:after,q:before{content:"";}
+abbr,acronym{border:none;}
+img,input{vertical-align:middle;}
+hr{display:none;}
+#skipNavi,.blind{position:absolute;left:0;top:0;width:0;height:0;font-size:0;line-height:0;text-indent:-9999px;overflow:hidden;visibility:hidden;}
+
+@font-face{
+    font-family:old_ttl1;
+    src:url(../font/OLDENGL.TTF); 
+}
+@font-face{
+    font-family:dust_ttl2;
+    src:url(../font/DustWest.otf); 
+}
+@font-face{
+    font-family:cont_txt;
+    src:url(../font/OldNewspaperTypes.ttf); 
+}

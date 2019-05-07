@@ -1,0 +1,557 @@
+@import url(reset.css);
+@font-face {
+    font-family: CJ_ONLYONE;
+    src: url(../font/CJ_ONLYONE_Medium.ttf);
+}
+
+/* Layout */
+body{
+    width:1480px; margin:0 auto;
+    font-family:"돋움",Dotum,sans-serif;font-size: 12px; color:#000;
+    background:url("../images/bg.png") repeat 0 0;
+}
+a{color:#666;text-decoration: none;}
+.gnb{display: none;}
+
+#container{position:relative; z-index:30;}
+#truck{
+    width:200px; height:200px; position:absolute; top:35%; left:0px;
+    background:url(../images/gb_truck_bnw.png) no-repeat 0% 0;
+    background-size:200%; z-index:30; cursor:pointer;
+    transition:all 0.5s linear 0s;
+}
+#truck:hover{
+    background:url(../images/gb_truck.png) no-repeat 0% 0;
+    background-size:200%; z-index:30;
+}
+@keyframes truck{
+            0%{bottom:0px; left:0%;}
+            100%{bottom:0%; left:-50%;}
+        }
+.truckToleft{
+    animation:truck 2s linear 0s 1 forwards;
+}
+/* Contents */
+#container > div{width:100%; height:100%; position:relative; overflow:hidden;}
+#container > div > section{
+    position:absolute; width:95%; height:80%; margin:5% 2.5%; 
+}
+#container > div > section > span{
+    display: block; position:absolute;
+}
+
+/*content1*/
+#content1 > section{
+    perspective:600px; 
+} 
+#content1 > section > h2{
+    opacity:0; width:100%; height:100%; position:relative; top:60px;  
+    transition:all 1s ease-in-out 0s;
+}
+#content1 > section > h2.ttl{
+    font-family:old_ttl1; font-size:80px; width:900px; margin-left:50%;
+    text-align:center; z-index:0; transform:translateX(-450px); padding-top:10px; 
+}
+#content1 > section > p > img{
+    z-index:10; ; margin:30px;
+}
+#content1 > section > dl{width:200px; margin:-120px 30px 0 0; float:right; padding:8px; border:1px solid #333; box-sizing:border-box;}
+#content1 > section > dl > dt{font-weight:600; color:#333; font-size:13px}
+#content1 > section > dl > dd{font-weight:300; color:#666; font-size:11px; margin-top:5px; font-family:"굴림",sans-serif;}
+
+/* 타이틀 아래 날짜 라인 */
+.hr{
+    width:100%; border-top:2px solid #333; border-bottom:2px solid #333;
+    height:22px; position:relative; font-family:cont_txt;
+    line-height:1.8;
+}
+.hr > p, .hr > copyright, .hr > span{position:absolute}
+.hr > p:first-child{left:0;}
+copyright{left:14%; font-size:12px; line-height:1.8}
+#date{left:50%; transform:translate(-80px);}
+span{right:5px; font-weight:600;
+}
+
+/* First Section Hotell Illust */
+#content1 > section > span:nth-of-type(1){/*Hotel*/
+    width:85%; height:700px; opacity:0; cursor:pointer;
+    background:url(../images/hotel_Bg_BnW.png) no-repeat 50px 0;
+    transition:all 1s ease-in-out 0.5s; z-index:10; background-size:102%
+} 
+#content1 > section > span:nth-of-type(1).on{
+    background-image:url(../images/hotel_Bg.png);
+}
+#content1 > section >p:nth-of-type(2){/*클릭유도버튼*/
+    font-family:cont_txt; font-size:22px; border:3px dotted #333; 
+     padding:10px; border-radius:25px; float:right; margin:60px 150px; 
+    text-align:center; animation:blinking 2.5s linear infinite;
+}
+@keyframes blinking{
+    15%{opacity:0;}
+    80%{opacity:1;}
+} 
+/*문열리기 캐릭터나오기*/
+#content1 > section > span:nth-of-type(2){/*부제목*/
+    width:330px; opacity:0; 
+    margin:2% 0 0 2%;
+    transition:all 1s ease-in-out 1s; line-height:1.8; 
+    text-align:left; font-size:70px; font-family:dust_ttl2; 
+    z-index:20;
+} 
+.boy{
+    position:relative; width:100px; height:250px; perspective:600px;
+    left:60%; top:40%; z-index:99;
+    }
+.boy.out{animation:moveR 5s ease 8s forwards;}
+#content1 > section > div.boy > span{
+    width:100px; height:250px; opacity:0;
+    transition:all 1s ease-in-out 1.5s; z-index:0; transform:translateZ(-100px);
+    background:url(../images/lobbyboy.png) no-repeat 0 0; 
+    animation:walk 2.1s steps(3,end) infinite; transform:scale(0.2);
+    position:absolute; top:0px; display:block;
+} 
+div.boy > span:after{
+    content:"Oh, darn.. we're out of cake for the Party! Let's go get some!"; 
+    display:block; background:#fff; border:5px dotted pink; width:230px; height:90px;
+    border-radius:25px; font-size:22px; font-family:cont_txt;
+    transform:translate(-250px); padding:10px; opacity:0;
+}
+div.boy > span.out:after{animation:conv 5s linear 3s 1;}
+@keyframes conv{
+    0%{opacity:1;}
+    80%{opacity:1;}
+    100%{opacity:0;}
+}
+@keyframes walk{
+    0%{background-position:0 0;}
+    100%{background-position:-300px 0;}
+}
+@keyframes moveR{
+    0%{left:1100px;}
+    100%{left:1800px;}
+}
+#content1 > section > div.boy > span.out{
+    z-index:99; opacity:1; top:100px; transform:translateZ(250px); transform:scale(0.7);
+}
+#content1 > section.on > h2{
+    position:absolute; left:0; top:0; opacity:1;
+}
+#content1 > section.on > span:nth-of-type(1){/*hotel*/
+    opacity: 1;
+} 
+#content1 > section.on > span:nth-of-type(2){/*ttl*/
+    position:absolute; opacity:1; left:0px; top:200px;
+} 
+
+/* content2 CJ one + tram */
+#content2{/*배경*/
+    background:url(../images/gb_rail_BnW.png) no-repeat 0 50%;
+    background-size:100%; transition:all 1s ease-in-out 0.5s    
+}
+#content2.bgChange{
+    background:url(../images/gb_rail.png) no-repeat 0 50%;
+    background-size:100%;    
+}
+#content2 > section > h2{/*CJ one banner*/
+    position:absolute; width:400px; height:450px; top:55px; left:3.5%; 
+    opacity:0; transform:rotate(45deg); transform-origin:top center;
+    background:url(../images/bg_bannerCjone_bnw.png) no-repeat 0 0;
+    transition:all 1s ease-in-out 0s; cursor:pointer;
+}
+#content2 > section > h2:hover{
+    background:url(../images/bg_bannerCjone.png) no-repeat 0 0;
+}
+#content2 > section > div {
+    width:90%; height:1500px; background:#fff; position:absolute; bottom:-250%; 
+    right:0px; z-index:99; background: url(../images/bg_cjone.png) no-repeat 0 7px;
+    background-size:100%; 
+}
+#content2 > section > div  > h3{
+    position:absolute; top:23%; left:5%; z-index:100;
+    font-size:60px; font-family:CJ_ONLYONE;
+}
+#content2 > section > div > blockquote{
+    width:400px; position:absolute; top:31%; left:5%; z-index:100;
+    font-size:26px; font-family:CJ_ONLYONE; text-align:left;
+}
+#content2 > section > div > p{
+    background:#d9687c;
+    background-size:100%; display:block;
+    width:100%; height:80%; margin-top:270px;
+}
+#content2 > section > div > button{
+    position:absolute; bottom:25%; right:5%; z-index:100;
+    background:none; color:white;
+    font-size:26px; font-family:CJ_ONLYONE; text-align:right;
+}
+#content2 > section > span:nth-of-type(1){/*Tram*/
+    width:250px; height:250px; position: absolute; left:41%; top:45%;
+    background:url(../images/gb_tram_bnw.png) no-repeat 0 0; cursor:pointer;
+    background-size:contain; opacity:0; transition:all 1.5s linear 0.5s;
+}
+#content2 > section > .tram:hover{
+    background:url(../images/gb_tram.png) no-repeat 0 0;
+    background-size:contain;
+}
+#content2 > section > span:nth-of-type(1).updown{
+    animation:tram linear 3s 1 forwards; 
+    background:url(../images/gb_tram.png) no-repeat 0 0;
+    background-size:contain;
+}
+@keyframes tram {
+            15%{top:45%; left:41%;}
+            100%{top:70%; left:15%;}
+        }
+#content2 > section > span:nth-of-type(2){
+    opacity:0; transition:all 1s ease-in-out 1s;
+}
+#content2 > section > span:nth-of-type(3){
+    opacity:0; transition:all 1s ease-in-out 1.5s;
+}
+#content2 > section.on > h2{
+    opacity:1; transform: rotate(0deg);
+}
+#content2 > section.on > span:nth-of-type(1){
+    opacity:1; top:0; left:81%;
+}
+#content2 > section.on > span:nth-of-type(2){
+    opacity:1; 
+}
+#content2 > section.on > span:nth-of-type(3){opacity:1;}
+
+#content2 > section > div > p > span:nth-of-type(1){
+    display:block; width:800px; height:700px; 
+    background:url(../images/Apple_Devices_mac.png) no-repeat 0 0;
+    background-size:100%; position:absolute; top:31%; right:50px;
+}
+.pc a{
+    display:block; overflow:hidden; width:738px; height:413px; 
+    margin:32px 32px 32px 32px; position: relative; cursor:pointer;
+}
+.pc a img{
+    width:100%; animation: slide 10s linear 2s infinite;
+    position:absolute; top:0;
+}
+@keyframes slide{ 
+    0%{transform:translateY(0);}
+    55%{transform:translateY(-72%);}
+    60%{transform:translateY(-72%);}
+    100%{transform:translateY(0);}
+}
+#content2 > section > div > p > span:nth-of-type(2){
+    display:block; width:350px; height:500px; 
+    background:url(../images/Apple_Devices_pad.png) no-repeat 0 0;
+    background-size:100%; position:absolute; top:43%; left:50px;
+}
+.tab a{
+    display:block; overflow:hidden; width:295px; height:396px; 
+    margin:45px 32px 32px 27px; position: relative;
+}
+.tab a img{
+    width:100%; animation: slide2 8s ease 2s infinite;
+    position:absolute; top:0;
+}
+@keyframes slide2{ 
+    0%{transform:translateY(0);}
+    55%{transform:translateY(-67%);}
+    60%{transform:translateY(-67%);}
+    100%{transform:translateY(0);}
+}
+#content2 > section > div > p > span:nth-of-type(3){
+    display:block; width:180px; height:600px; 
+    background:url(../images/Apple_Devices_phone.png) no-repeat 0 0;
+    background-size:101%; position:absolute; top:53.8%; left:28%;
+}
+.mob a{
+    display:block; overflow:hidden; width:144px; height:260px; 
+    margin:50px 32px 32px 20px; position: relative;
+}
+.mob a img{
+    width:100%; animation: slide3 8s ease-in-out 2s infinite;
+    position:absolute; top:0;
+}
+@keyframes slide3{ 
+    5%{transform:translateY(0);}
+    55%{transform:translateY(-70%);}
+    60%{transform:translateY(-70%);}
+    100%{transform:translateY(0);}
+}
+
+/* content3 HUYNDAI IHL */
+#content3 > section > h2{
+    opacity:0; transition:all 1s ease-in-out 0s; 
+    font-family:dust_ttl2; font-size:60px; letter-spacing:-1.5px; margin:1% 1.5%;
+}
+#content3 > section span.btn1{/*IHL Logo*/
+    cursor:pointer; width:300px; left:-500px; transition:all 1s linear 0;
+}
+#content3 > section span.btn1:hover{
+    background:url(../images/logo_ihl.png) no-repeat 0 0;
+}
+#content3 > section span.btn1:hover img{opacity:0;}
+
+#content3 > section span.btn2{/*WA Logo*/
+    opacity:0; transition:all 1s ease-in-out 0;
+    left:-200px; cursor:pointer; display:block; width:300px;
+}
+#content3 > section span.btn2:hover{
+    background:url(../images/logo_WA.png) no-repeat 0 -10px;
+}
+#content3 > section span.btn2:hover img{opacity:0;}
+
+#content3 > section > span:nth-of-type(3){ /*Monitor*/
+   display:block; width:55%; top:110px; right:-500px; 
+    background:url(../images/bg_monitor.png) no-repeat 0 0;
+    background-size:contain;
+    opacity:0; transition:all 1s ease-in-out 1s;
+}
+#content3 > section > span:nth-of-type(3) p{
+     height:600px; margin:40px; overflow:hidden; 
+}
+#content3 > section > span:nth-of-type(3) p > img{width:111%; }
+
+#content3 > section > span.btn3{/*w3c Logo*/
+    opacity:1; transition:all 1s ease-in-out 0; display:block; width:150px; height:100px; 
+    overflow:hidden; cursor:pointer; position:absolute; left:25%; top:38%;
+}
+#content3 > section span.btn3:hover{
+    background:url(../images/W3C_valid.png) no-repeat 0 0;
+    background-size:contain;
+}
+#content3 > section span.btn3:hover img{
+    opacity:0; 
+}
+#content3 > section > span.btn3 img{width:150px;}
+
+#content3 > section > span.btn4{/*clossbrowser Logo*/
+    opacity:1; transition:all 1s ease-in-out 0;display: block; width:180px;
+    cursor:pointer; position:absolute; left:23%; top:61%;
+    
+}
+#content3 > section > span.btn4:hover{
+    background:url(../images/crossB.png) no-repeat 0 0;
+    background-size:contain;
+}
+#content3 > section > span.btn4 img{width:200px; opacity:1;}
+#content3 > section > span.btn4:hover img{opacity:0;}
+
+#content3 > section.on > h2{opacity:1;}
+#content3 > section.on span.btn1{
+    opacity:1; left:0px; top:30%;
+}
+#content3 > section.on span.btn2{
+    opacity:1; left:0; top:55%;
+}
+#content3 > section.on > span:nth-of-type(3){
+    opacity:1; right:6%;
+}
+#content3 > section > img:nth-of-type(1) {
+    position: absolute; width:400px; left:800px; bottom:-100px; opacity:0; transform:rotate(45deg); transition:all 0.5s ease-in-out 0s; 
+}
+#content3 > section > img:nth-of-type(1).throw{
+    transform:rotate(0deg); left:40%; bottom:200px; opacity:1;
+}
+#content3 > section > img.img2{
+    position: absolute; width:25%; left:1000px; bottom:-100px; opacity:0; 
+    transform:rotate(45deg); transition:all 0.5s ease-in-out 0.5s; 
+    box-shadow:-5px -5px 5px rgba(0,0,0,0.3);
+}
+#content3 > section > img:nth-of-type(2).throw{
+    transform:rotate(0deg); left:65%; bottom:200px; opacity:1;
+}
+
+/*Content4 APP Design & Nasa*/
+#content4 > section{ box-sizing: border-box;}
+.left{ 
+    width:45%; height:95%; margin-top:2%; border-right:1px dashed #666; position:absolute; left:0; box-sizing:border-box; background:url(../images/bg_nasa.png) no-repeat 93% 470px; background-size:50%;  
+}
+.left p{
+    width:95%; font-size:22px; font-family:cont_txt;
+    text-align:justify; line-height:1
+}
+.left > span{
+    width:250px; height:600px; transform:translateY(0deg);
+}
+.left > span:hover > img{
+    transform:rotateY(0deg); opacity:1;
+}
+.left > span > img{
+    transform:rotateY(90deg); position:relative; z-index:99;
+    opacity:0; transition:all 0.5s ease-out 0s;
+}
+.left > span:after{
+    content:""; display:block; overflow:hidden; width:250px; height:250px;
+    background:url(../images/logo_nasa_bnw.png) no-repeat 0 0; position:absolute;
+}
+.left h2{
+    font-family:dust_ttl2; font-size:65px; line-height:0.8; text-align:center;
+    margin-bottom:30px;
+} 
+.left > span >img{
+    float:left;
+    } 
+.left button{
+    background:none; border:2px dashed #333; font-family:cont_txt; 
+    font-size:30px; border-radius:8px;position:absolute; bottom:15%; left:30px;
+}
+.left button:hover{
+    background:#666; 
+}
+.turnP{
+    transform:rotateY(-180deg); transform-origin:left center; opacity:0
+}
+.left .nasCont{
+    position:absolute; right:-106%; top:-5px; width:100%; height:150px; 
+    border-radius:25px; background:#fff; z-index:50; overflow:hidden;
+    background:url(../images/nasaLandingPage5.jpg) no-repeat 0 150px; 
+    background-size:100%; box-shadow:5px 5px 3px #333; opacity:0;
+    transition:all 2s linear 1.5s;
+}
+.left .nasCont span{
+    display:block; width:100%; height:150px; background:navy; text-align:center; 
+    line-height:2.4; font-family:"gothic", sans-serif; font-size:60px; color:white; 
+    transition:all 3s linear 0s; z-index:50;
+}
+.left > div.active{
+    animation: up 26s linear 0s infinite;
+    opacity:1; right:-108%; top:0;  height:100%;
+}
+.left .nasCont p i{
+    position: absolute; bottom:30px; right:30px; color:#666; 
+}
+
+@keyframes up{
+    0%{background-position:0 150px;}
+    50%{background-position:0 90%;}
+    100%{background-position:0 150px;}
+}
+
+/* Right */
+div.right{
+    width:50%; height:98%; margin-top:1%; position:relative; left:48%; box-sizing:border-box; overflow:hidden;
+    transition:all 1s linear 0s; 
+    background:url(../images/bg.png) no-repeat -100px 0;
+}
+
+#canvas{
+    position:absolute; left:23%; top:20%; 
+}
+.right svg{
+    background:rgba(0, 0, 0, 0.3); border-radius:25px; padding:20px; box-sizing:border-box; margin:0 3%;
+}
+/* The button */
+#button-blue{
+	position:absolute; top:330px; width:200px;border:white solid 4px;cursor: pointer;
+	background-color: #0493bd;margin-top: -4px;color: white;text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;font-size: 20px;letter-spacing:.1em;
+    padding-top: 22px;padding-bottom:22px;font-weight: 500;transition: all 0.3s; z-index:10;
+}
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);color: #0493bd; 
+}
+/* The white hover effect */
+.ease {
+	width: 0px;	height: 70px; background-color: white; z-index:0;
+	transition: .3s ease; position:absolute; top:330px;
+}
+/* Make visable when hover */
+.btn-container:hover .ease{
+	width:200px;max-width: 500px;
+	background-color: white;
+	border: 0;
+}
+.right .txt2 {
+    width:600px; margin:0 auto; font-size:35px; 
+    font-family:Pacifico; text-align:center; color:#666;
+    position:absolute; top:31%; left:49%; transform:translate(-320px);
+    position:absolute; top:31%; left:49%; transform:translate(-320px);
+}
+#content4 > section.on .path{
+    stroke-dasharray:1900;
+    stroke-dashoffset:0;
+    animation:dash 5s linear 0s;
+}
+    @keyframes dash {
+        0%{stroke-dashoffset:1900; opacity:0;}
+        30%{opacity: 1;}
+        100%{stroke-dashoffset:0; opacity: 1;}
+    }
+.right h2{font-family:dust_ttl2; font-size:62px; line-height:1.2; margin:0 3%; }
+.right p{
+    width:47%; float:left; margin-left:15px; font-size:18px; font-family:cont_txt; line-height:1.1; text-align: justify;
+}
+@keyframes flash{
+    0%{transform:scale(0); opacity:0;}
+    50%{transform:scale(1); opacity:1;}
+    100%{transform:scale(0); opacity:0;}
+}
+
+/* Profile / Skills*/
+#content5 h2{
+    font-family:dust_ttl2; font-size:80px; margin-top:2%; 
+}
+#content5 .profile{
+    width:400px; height:600px; left:40px; top:18%; box-shadow:3px 3px 5px rgba(0,0,0,0.3);
+    background:white url(../images/portrait_VB_bnw.png) no-repeat 50% 20%; background-size:100%; cursor:pointer; 
+} 
+#content5 .profile:hover{
+    transform:scale(0.9);
+}
+#content5 blockquote{
+    display:block; width:360px; font-family:cont_txt; font-size:20px; margin:10px 20px; z-index:50; position:absolute; bottom:0px;
+}
+#content5 section div#contact{
+    width:450px; height:600px; transform:scale(0.5);background:#3e2f58; 
+    position:absolute; left:50px; top:16%; border-radius:8px; font-family:sans-serif; transition:all 0.5s ease 0s; color: aliceblue; text-align-last: center; font-size:22px; padding:20px 20px 20px 20px; box-sizing: border-box; 
+}
+#content5 section div#contact span{
+    display:block; width:350px; height:200px; margin-left:29px; margin-top:-20px; 
+}
+#content5 section div#contact > p{font-size:32px; font-family:fantasy}
+#content5 section div#contact h6{font-size:18px; margin-top:10px;}
+#content5 section div#contact::first-letter{font-weight:bold; font-size:38px;}
+#content5 section div#contact.card{
+    left:430px; transform:scale(1.1);
+}
+#content5 .skills{
+    width:350px; height:600px; margin:1.55% 10% 0 0; background:url(../images/gb_cake.png) no-repeat 0 0; cursor:pointer;
+} 
+#content5 .skills > p{
+    position:absolute; left:55px; bottom:35px; font-size:18px; font-family:cont_txt; color:#666;
+}
+#content5 .skills img{transition:all 0.5s linear 0s; }
+#content5 .skills:hover img{opacity:0;} 
+#content5 #stats{
+    width:450px; height:470px;position:absolute;right:330px; top:28%; padding:15px 130px 30px 30px; background:#fff; transform:scaleX(0);
+    transform-origin: right; transition:all 0.5s ease-in 0s;
+}
+#content5 #stats.spread{
+    transform:scaleX(1);
+}
+#stats p{font-size:18px; font-family:fantasy; line-height: 1.5; margin:10px 0; }
+#stats p span{
+    font-size:13px; font-family:sans-serif; line-height: 1.5; font-weight:300; 
+}
+#stats dl{margin-top:20px;}
+#stats dl dt{margin:5px 0; font-weight:700; font-size:14px;}
+#stats dl dd{
+    width:10px; height:12px; margin:5px 0; color:#fff; font-size: 10px; text-indent:15px; text-align: right; font-weight: bold;
+}
+#stats dl dd:nth-of-type(1){background:#855fa8; width:90%}
+#stats dl dd:nth-of-type(2){background:#98c755; width:80%}
+#stats dl dd:nth-of-type(3){background:#f495ae; width:70%}
+
+/*QuickMenu*/
+.quick{
+    position: absolute; right:0; width:170px; padding:10px;
+    z-index:40; border:2px groove #eee; border-radius:8px; 
+    background:rgba(255,255,255,0.5); box-sizing: border-box;
+}
+.quick li a{
+    display:block; padding: 8px 0; border-bottom: 2px dotted #ccc;
+    text-align:left; font-family:cont_txt; font-size:14px; color:#333;
+}
+.quick li a:hover,.quick li a:focus{
+    background:#eee; color:#000;
+}
+.quick li a.on{background:palevioletred; color:#fff;}
