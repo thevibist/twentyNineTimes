@@ -1,0 +1,146 @@
+@import url(commonLayout.css);
+
+*{-webkit-text-size-adjust:none;}
+/*-webkit-text-size-adjust는 뷰포트 크기가 변할때 자동으로 사이즈 조정해주는 기능*/
+@font-face {
+    font-family:SF-Font, calibri;
+    src: url(../font/SF-Font.dmg), url(../font/calibri.ttf);
+}
+@font-face {
+    font-family:Typo_SsangmunDongB; 
+    src:url(../font/Typo_SsangmunDongB.ttf);
+}
+body{
+    font-family:calibri; font-size: 14px; color:#fff;
+    font-size: 14px; color:#fff;
+}
+a{color:#fff; text-decoration: none;}
+a:visited{color:#fff;}
+a:hover,a:active{color: #fff; text-decoration: none;}
+
+/* Layout */
+body{background:rgba(0,0,0,0.3);}
+#wrap{
+    width:100%; height:100%; background:url(../images/bg.gif) no-repeat 0 0; 
+    opacity:1; z-index:0; position:absolute; background-size:150%; overflow: hidden;}
+header{
+    width:96%; margin:0 2%; z-index:10;
+}
+
+/* Header */
+
+/*Top system bar menu*/
+.top_bar{
+    width:100%; height:22px; position: relative; 
+}
+.top_bar p{
+    height:22px; float:right; font-family:calibri; 
+    line-height: 2;
+    /*position: absolute; right:0;*/ 
+}
+.top_bar p:nth-of-type(2){position: absolute; right:50px;}
+.top_bar p:nth-of-type(3){position: absolute; right:30px;}
+.top_bar p img{height:14px;}
+.top_bar p#clock{
+    width:40px; height:18px; position: absolute; left:0; font-family:calibri; 
+    font-weight: 550;
+}
+
+.navi_bar{width:100%; height:20px;position:relative;}
+
+/*Main Tittle bar*/
+.main_ttl{
+    width:100%; height:48px; margin-bottom:10px; position:relative;
+}
+.main_ttl h1{
+    height:48px; font-family:SF-Font; font-size:22px; 
+    position:absolute; left:50%; transform:translateX(-20px); line-height: 1.5
+}
+.main_ttl p{width:30px;height:17.5px; margin:15px; float:left;}
+.main_ttl p:nth-of-type(2) img{width:30px;position:absolute; right:0;}
+
+.srcBar{position:relative; width:100%;}
+.srcBar input{
+    background:none; width:355px; height:30px; border:1px solid #fff; border-radius:15px;
+    box-shadow:0 0 3px rgba(255 255 255 0.5); 
+}
+.srcBar input::placeholder {
+  color:white; text-indent:35px; font-size:15px; letter-spacing: 1px;
+} 
+.srcBar label img{
+    position:absolute; left:10px; top:9px; width:15px; 
+}
+
+/* Container */
+#wrap{
+    width:375px; height:815px; background:url(../images/bg.gif) no-repeat 0 0;
+    background-size:110%; background-blend-mode: soft-light; opacity:0.8;
+    overflow: hidden; z-index:0;
+}
+
+#container{
+    width:100%; height:630px; position:relative; 
+}
+#container > h2:first-child{width:150px;}
+#container h2{
+    display:block; width:100px; height:50px; font-size: 18px; font-weight: bold;
+    line-height:3; text-indent:20px;
+}
+h2.seconTab{margin-left:100px;}
+
+#container ul{
+    width:100%; height:80px; background:rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1); padding:10px 0 10px 30px; box-sizing:border-box;
+}
+#container ul li{
+    display:block; float:left; width:46px; height:46px; position:relative;
+     margin-right:22px; 
+    
+}
+#container ul p{
+    width:42px; height:42px; border-radius:23px; border:1px dotted white;
+    background:url(../images/ppl.jpg) no-repeat -2px -4px; background-size:550%;
+}
+#container ul li:after{
+    content:""; display: block; width:5px; height:5px; background:purple;
+    border-radius:2.5px; position:absolute; right:-3px; top:18px; z-index:30;
+    box-shadow:1px 1px 8px #fff; 
+}
+#container ul li > span{
+    position:absolute; font-size:12px; margin-left:50%; margin-top:5px; 
+    transform:translateX(-50%);
+}
+#container section{position:absolute; width:100%; height:400px;}
+
+#container dl{
+    width:100%; height:420px; background:rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1); position:relative;
+    padding:15px;
+}
+
+#container dl dt{
+    width:50px; height:50px; border-radius:23px; border:1px dotted white;
+    background:url(../images/ppl.jpg) no-repeat -5px -5px; margin-bottom:20px;
+    position:relative; box-sizing:border-box; background-size:600%;
+}
+#container dl dd{position: absolute; width:100px; margin-top:-65px; margin-left:60px;}
+#container dl p{width:80%; position: absolute; margin-top:-45px; margin-left:60px;}
+
+footer{width:100%; position:relative;}
+footer button{
+    position:absolute; top:-18px; left:50%; transform:translateX(-18px); 
+    width:38px; height:38px; background:#5b0ae8;
+    border-radius:19px; box-shadow:2px 2px 3px rgba(0,0,0,0.5);
+    
+}
+
+footer span{
+    display:block; width:22px; height:4px; background:#fff; margin-left:2px;
+}
+footer span:after{
+    content:""; display:block; width:22px; height:4px; background:#fff;
+    transform:rotate(90deg);
+}
+
+
+

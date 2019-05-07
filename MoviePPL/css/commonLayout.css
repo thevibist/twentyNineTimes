@@ -1,0 +1,90 @@
+@import url(reset.css);
+
+*{-webkit-text-size-adjust:none;}
+/*-webkit-text-size-adjust는 뷰포트 크기가 변할때 자동으로 사이즈 조정해주는 기능*/
+@font-face {
+    font-family:SF-Font, calibri;
+    src: url(../font/SF-Font.dmg), url(../font/calibri.ttf);
+}
+@font-face {
+    font-family:Typo_SsangmunDongB; 
+    src:url(../font/Typo_SsangmunDongB.ttf);
+}
+body{
+    font-family:calibri; font-size: 14px; color:#fff;
+    font-size: 14px; color:#fff;
+}
+a{color:#fff; text-decoration: none;}
+a:visited{color:#fff;}
+a:hover,a:active{color: #fff; text-decoration: none;}
+
+/* Layout */
+body{background:rgba(0,0,0,0.3);}
+#wrap{
+    width:375px; height:815px; background:url(../images/bg.gif) no-repeat 0 0; 
+    opacity:1; z-index: 0; position:absolute; background-size:150%; overflow: hidden;}
+header{
+    width:96%; margin:0 2%;
+}
+
+/* Header */
+
+/*Top system bar menu*/
+.top_bar{
+    width:100%; height:22px; position: relative; 
+}
+.top_bar p{
+    height:22px; float:right; font-family:calibri; 
+    line-height: 2;
+    /*position: absolute; right:0;*/ 
+}
+.top_bar p:nth-of-type(2){position: absolute; right:50px;}
+.top_bar p:nth-of-type(3){position: absolute; right:30px;}
+.top_bar p img{height:14px;}
+.top_bar p#clock{
+    width:40px; height:18px; position: absolute; left:0; font-family:calibri; 
+    font-weight: 550;
+}
+
+.navi_bar{width:100%; height:28px; position:relative;}
+
+/*Main Tittle bar*/
+.main_ttl{
+    width:100%; height:48px; margin-bottom:10px; position:relative;
+}
+.main_ttl h1{
+    height:48px; font-family:SF-Font; font-size:22px; 
+    position:absolute; left:50%; transform:translateX(-20px); line-height: 1.5
+}
+.main_ttl p{width:30px;height:17.5px; margin:15px; float:left;}
+.main_ttl p:nth-of-type(2) img{
+    position:absolute; width:30px; right:0; top:50%; transform:translateY(-15px);
+}
+.srcBar{position:relative;top:-10px; width:100%; opacity:0.5; }
+.srcBar input{
+    background:none; width:355px; height:30px; border:1px solid #fff; border-radius:15px;
+    box-shadow:1px 1px 5px white; 
+}
+.srcBar input::placeholder {
+  color:white; text-indent:35px; font-size:15px; letter-spacing: 1px;
+} 
+.srcBar label img{
+    position:absolute; left:10px; top:9px; width:15px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

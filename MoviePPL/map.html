@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APP Coding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum scale=1.0, minimum scale=1.0, user-scalable=no"/>
+    
+    <meta name="apple-mobile-web-app-statud-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <link rel="apple-touch-icon-precomposed" href=".png"/>
+    <link rel="apple-touch-startup-image" type=".png" href="main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/commonLayout.css"/>
+    
+    <style type="text/css">
+        #map{width:100%; height:400px; background: gray;}
+    </style>
+    
+     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+     <!--<script type="http://code.jquery-1.11.1.min.js"></script>
+    온라인에서 퍼오는 제이쿼리
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.min.js"></script>-->
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+       <header>
+           <h1 class="logo"><a href="#">MOBILE</a></h1>
+           <a href="#" class="srchBtn"><span class="src_icon"><img src="images/btn_search.png" /></span></a>
+           <div class="srch_box">
+               <form action="" method="post">
+                   <fieldset>
+                       <legend class="blind">검색</legend>
+                       <label for="srch" class="blind">검색어 입력</label>
+                       <input type="search" id="srch" />
+                       <input type="image" src="images/btn_down_search.png" alt="검색버튼" />                       
+                   </fieldset>
+               </form>
+           </div>
+       
+       
+       <nav class="gnb">
+           <ul>
+               <li><a href="#">COMPANY</a></li>
+               <li><a href="#">PROJECT</a></li>
+               <li><a href="#">RECRUIT</a></li>
+               <li><a href="#">NITICE</a></li>
+           </ul>
+       </nav>
+    </header>
+       <hr />
+       <section>
+           <!-- Google map -->
+           <div id="map">
+               
+               <script>
+                  var map;
+                  function initMap() {
+                    var pos =  {lat:37.498206, lng:127.027578};/* 위도 경도 */
+                    //위도경도를 변수에 넣고!
+
+                    map = new google.maps.Map(document.getElementById('map'), {
+                      center: pos,
+                      zoom: 15
+                    });
+
+                    var marker = new google.maps.Marker({
+                        position: pos,
+                        map: map,
+                        title: "이젠컴퓨터학원"
+                    });  
+
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content : "서울시 강남구 역삼1동 강남역"
+
+                    });  
+
+                    infowindow.open(map,marker);
+                     //오픈!맵이랑 마커랑 같이 보여져라 !
+          
+          
+      }  //initMap끝
+         
+    </script>
+               <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfy_05WrUsx2gd8Sd3q4pVktBFoVm0q9c&callback=initMap" async defer></script>
+             
+           </div>
+       </section>
+       <hr />
+       
+       <footer>
+           <div class="foot_inner">
+               <ul>
+                   <li><a href="#">홈</a></li>
+                   <li><a href="#">메뉴</a></li>
+                   <li><a href="#">전체</a></li>
+               </ul>
+               
+                <ul>
+                   <li><a href="#">로그인</a></li>
+                   <li><a href="#">PC ver</a></li>
+                   <li><a href="#">고객센터</a></li>
+               </ul>
+               
+                <ul>
+                   <li><a href="#">개인정보 취급방침</a></li>
+                   <li><a href="#">이용약관</a></li>
+               </ul>
+           </div>
+           <p><small>COPYRIGHT&amp;copy;2018. ALL RIGHT RESERVED</small></p>
+           <a href="#"><img src="images/btn_bot_top.png" alt=""/></a>
+        
+       </footer>
+  
+   
+   
+    </div>
+</body>
+</html>

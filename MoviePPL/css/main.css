@@ -1,0 +1,101 @@
+@import url(commonLayout.css);
+/* header */
+.burgerM img{width:30px;}
+.search img{top:0;} 
+/* Section Contents */
+#wrap{
+    width:375px; height:815px; background:url(../images/bg.gif) no-repeat 0 0;
+    background-size:110%; background-blend-mode: soft-light; opacity:0.8;
+    overflow: hidden;
+}
+section{
+    width:96%; margin:0 auto; cursor:pointer;
+}
+section article{
+    width:175px; height:175px; float:left; background:#fff;
+    border-radius: 10px; box-shadow:10px 10px 10px -10px rgba(0,0,0,0.4); 
+    position:relative;
+}
+section article h2{
+    font-family:'Russo One', sans-serif; font-size: 32px; text-align:center;
+    margin-top:40%;
+}
+section article:nth-child(1){
+    background:linear-gradient(135deg, #657bff 0%,#a76cff 98%);
+    margin-right:10px; position:relative;
+}
+section article:nth-child(1) h2{font-size:24px; margin-top:70%; }
+span.map{position:absolute; top:35%; left:40%;}
+
+section article:nth-child(2){
+    background:url(../images/bgLatest.jpg) no-repeat 50% 30%; 
+    background-size:120%;
+}
+section article:nth-child(3){
+    width:100%; height:200px; margin:10px 0;  
+    background:url(../images/bgGenre.jpg) no-repeat 50% 30%;
+    background-size:cover;
+}
+section article:nth-child(3) h2{margin-top:25%;}
+section article:nth-child(4){
+    margin-right:10px;
+    background:url(../images/bgChart.gif) no-repeat 50% 30%;
+    background-size:cover;
+}
+section article:nth-child(5){
+    background:linear-gradient(-45deg, #657bff 0%,#a76cff 98%) 
+}
+span.star{display:block; width:100%; height:100%; margin:-10px 0; background:url(../images/bgStar_blured.png) no-repeat 5px 5px;
+background-size:95%; 
+}
+span.star i{margin:30% 38%;}
+section article:nth-child(5) h2{font-size:24px; margin-top:-30%; text-align: center;}
+
+/* Footer */
+footer{width:96%; height:110px; position:absolute; bottom:10px; margin:0 2%;;}
+footer ul{width:100%;}
+footer ul li{
+    float:left; width:113px; height:108px; border-radius: 10px;
+    box-shadow:10px 10px 10px -10px rgba(0,0,0,0.4); position: relative;
+    cursor:pointer;
+}
+footer ul li.one:after{
+    z-index: 50; position: absolute; top:0px; left:0px; content:""; width:100%; height:95%; background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%); border-radius: 10px; 
+}
+footer ul li:nth-of-type(1){
+    background:linear-gradient(45deg, #4c4cf5 0%,#7d42f3 98%);
+}
+    span.friends{
+    display: block; width:30px; height:30px; background:#fff; border-radius:25px; position:relative; top:45%; left:45%;
+}
+    span.friends:after{
+    content:""; display: block; width:30px; height:30px; border:3px solid #fff; border-radius:25px; position:absolute; top:-50%; left:-50%; box-sizing: border-box;
+}
+
+footer ul li:nth-of-type(2){
+    background:linear-gradient(45deg, #4c4cf5 0%,#7d42f3 98%);
+    margin:0 10px;
+}
+footer span.box{display: block; width:35px; height:42px; margin:29% 34.5%}
+
+footer ul li:nth-of-type(3){
+    background:linear-gradient(45deg, #4c4cf5 0%,#7d42f3 98%);
+}
+footer span.chat{
+    display:block; width:42px; height:42px; margin:32% 31.5%; 
+    transform:rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
