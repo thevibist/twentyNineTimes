@@ -32,9 +32,9 @@ a{color:#666;text-decoration: none;}
     animation:truck 2s linear 0s 1 forwards;
 }
 /* Contents */
-#container > div{width:100%; height:100%; position:relative; overflow:hidden;}
+#container > div{width:100%; height:100%; position:relative; overflow:hidden; }
 #container > div > section{
-    position:absolute; width:95%; height:80%; margin:5% 2.5%; 
+    position:absolute; width:95%; height:90%; margin:3% 2.5%; ;
 }
 #container > div > section > span{
     display: block; position:absolute;
@@ -413,13 +413,12 @@ div.boy > span.out:after{animation:conv 5s linear 3s 1;}
     transition:all 3s linear 0s; z-index:50;
 }
 .left > div.active{
-    animation: up 20s linear 0s infinite;
+    animation: up 26s linear 0s infinite;
     opacity:1; right:-108%; top:0;  height:100%;
 }
 .left .nasCont p i{
     position: absolute; bottom:30px; right:30px; color:#666; 
 }
-.left .nasCont p i:hover{cursor:pointer;}
 
 @keyframes up{
     0%{background-position:0 150px;}
