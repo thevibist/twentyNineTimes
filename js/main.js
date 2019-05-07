@@ -206,7 +206,7 @@ $(function(){
         return false;
     });
     function openAPP(){
-        window.open("moviePPL/splash.html","blank","toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=375,height=812");
+        window.open("MoviePPL/splash.html","blank","toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=375,height=812");
 		}
    
     /* content5 */
